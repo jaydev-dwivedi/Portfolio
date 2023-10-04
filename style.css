@@ -25,8 +25,6 @@ hr {
     width: 100%;
 }
 
-h2 {}
-
 /* Utility Classes */
 .grid {
     display: grid;
@@ -53,6 +51,11 @@ h2 {}
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+.flex-align-items {
+    display: flex;
+    align-items: center;
 }
 
 .margin-top-10vh {
@@ -104,12 +107,12 @@ nav>li {
 
 #profilePic {
     background-color: var(--black-color);
-    height: 300px;
-    width: 300px;
-    border: 5px solid orangered;
+    height: 330px;
+    width: 330px;
+    border: 10px solid orangered;
     border-radius: 50%;
     margin-bottom: 2rem;
-    box-shadow: 0px 0px 20px 1px var(--black-color);
+    box-shadow: 0px 0px 23px 0px var(--black-color);
 }
 
 #profilePic>img {
@@ -120,7 +123,7 @@ nav>li {
 }
 
 #introName {
-    color: var(--black-color);
+    color: var(--royal-blue);
     font-size: 2.5rem;
     font-family: var(--font-family);
 }
@@ -139,7 +142,6 @@ nav>li {
 }
 
 /* Media queries for Introduction Section */
-
 @media screen and (max-width: 1290px) {
     #introSection {
         height: 90vh;
@@ -213,59 +215,6 @@ nav>li {
     }
 }
 
-/* Section-2: Education */
-/* #educationSection {
-    grid-template-areas:
-        'boards-10th'
-        'boards-12th'
-        'bachelors'
-    ;
-    grid-template-rows: 2fr 2fr 2fr;
-    background-color: var(--seafoam-green);
-    height: 70vh;
-    padding: 5rem;
-    padding-top: 0rem;
-    padding-bottom: 7rem;
-}
-
-#topic-education {
-    align-items: center;
-    color: var(--sapphire-blue);
-    font-family: var(--font-family);
-    padding: 2rem;
-    font-size: 2.5rem;
-}
-
-.education {
-    height: 100%;
-    width: 100%;
-}
-
-.education>h3,
-.education>h2,
-.education>p {
-    padding-left: 2rem;
-    font-family: var(--font-family);
-}
-
-#boards-10th {
-    grid-area: boards-10th;
-    background-color: blueviolet;
-
-}
-
-#boards-12th {
-    grid-area: boards-12th;
-    background-color: aqua;
-}
-
-#bachelors {
-    grid-area: bachelors;
-    background-color: blueviolet;
-} */
-
-/* Media queries for Section-2: Education */
-
 /* Section-3: Skills (4 skills) */
 #skillSection {
     grid-template-areas:
@@ -273,6 +222,8 @@ nav>li {
         'web btrap c cpp';
     grid-template-rows: 1fr 3fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* border-bottom: 10px solid var(--mid-night-blue); */
+    padding-bottom: 3rem;
     height: 80vh;
 }
 
@@ -393,26 +344,78 @@ nav>li {
     grid-template-areas:
         'projects projects'
         'netflix temp';
-    grid-template-rows: 1fr 3fr;
-    height: 100vh;
+    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 1fr 1fr;
+    height: 90vh;
 }
 
 #topic-projects {
     grid-area: projects;
+    font-family: var(--font-family);
+    padding-left: 4.5rem;
+    font-size: 2.5rem;
+    color: var(--black-color);
 }
 
 #netflix-clone {
+    /* background-color: cornflowerblue; */
     grid-area: netflix;
-    background-color: cornflowerblue;
 }
 
 #temp-cnvtr {
+    /* background-color: aqua; */
     grid-area: temp;
-    background-color: aqua;
+}
+
+#netflix-clone > div,
+#temp-cnvtr > div {
+    justify-content: space-around;
+    /* background-color:aliceblue; */
+    width: 70%;
+    height: 10vh;
+}
+
+#netflix-clone > div > a > button,
+#temp-cnvtr > div > a > button{
+    font-size: 1.2rem;
+    background-color: var(--sapphire-blue);
+    padding: 1rem;
+    width: 120px;
+    border-radius: 50px;
+    font-family: var(--font-family);
+    color: var(--white-color);
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#netflix-clone > div > a,
+#temp-cnvtr > div > a {
+    color: var(--black-color);
+    text-decoration: none;
+    outline: none;
+}
+
+.project-img {
+    border: 2px solid red;
+    height: 60%;
+    width: 70%;
+    border-radius: 23px;
+    box-shadow: 0px 0px 10px 0px var(--teal-blue);
+    aspect-ratio: 16/9;
+    margin-bottom: 2rem;
+    object-fit: cover;
+}
+
+.project {
+    font-size: 2rem;
+    color: var(--teal-blue);
+    font-family: var(--font-family);
 }
 
 /* Media queries for projects section */
-
 /* @media screen and (max-width: 400px) {
     #projectSection {
         grid-template-areas:
@@ -440,17 +443,54 @@ nav>li {
     grid-template-areas:
         'experience'
         'oasis';
-    grid-template-rows: 2fr 3fr;
-    height: 50vh;
+    grid-template-rows: 1fr 3fr;
+    height: 65vh;
+    align-items: center;
+    background-color: #9FE2BF;
+    padding: 3rem 0rem;
+    /* border-top-right-radius: 12px; */
+    /* border-bottom-right-radius: 12px; */
+    /* width: 95%; */
 }
 
 #topic-experience {
     grid-area: experience;
+    font-family: var(--font-family);
+    padding-left: 4.5rem;
+    font-size: 2.5rem;
+    /* margin-bottom: 2rem; */
+    color: var(--mid-night-blue);
+}
+
+#topic-experience > h1 {
+    width: 90%;
+    border-bottom: 3px solid var(--mid-night-blue);
+}
+
+#exp-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 3rem 3rem 3rem 8rem;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px 0px var(--steel-blue);
+}
+
+#exp-1 {
+    /* background-color: blue; */
+    color: var(--royal-blue);
+    width: 100%;
+    font-size: 2.5rem;
+}
+
+#exp-1-pos {
+    font-size: 1.5rem;
+    color: #1d1d1feb;
 }
 
 #oasis {
-    background-color: aquamarine;
     grid-area: oasis;
+    font-family: var(--font-family);
 }
 
 /* Media queries for Experience section */
@@ -468,28 +508,83 @@ nav>li {
 footer {
     grid-template-areas:
         'contact-me contact-me contact-me'
-        'contact address social';
-    height: 70vh;
+        'contact social address';
+    height: 60vh;
     grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--black-color);
+    /* margin-top: 15vh; */
 }
 
 #topic-contact {
     grid-area: contact-me;
+    color:var(--white-color);
+    font-family: var(--font-family);
+    padding: 2rem 3rem;
 }
 
-#contact {
-    background-color: brown;
+#contacts {
+    /* background-color: brown; */
     grid-area: contact;
+    color: var(--white-color);
+    padding-left: 3rem;
 }
 
-#address {
-    background-color: blanchedalmond;
-    grid-area: address;
+#contacts > span {
+    font-family: var(--font-family);
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+#contacts > a > button {
+    font-family: var(--font-family);
+    color: var(--black-color);
+    font-weight: 400;
+    width: 170px;
+    font-size: 1.1rem;
+    padding: 0.8rem 0rem;
+    margin: 1.8rem 0rem;
+    border-radius: 50px;
+    border: none;
 }
 
 #social {
-    background-color: aqua;
+    /* background-color: aqua; */
     grid-area: social;
+    font-family: var(--font-family);
+    color: var(--white-color);
+}
+
+.social-handles {
+    /* background-color: #191970; */
+    box-sizing: border-box;
+    width: 90%;
+    margin: 0.5rem 1rem;
+}
+
+.social-handles > a > span {
+    color: var(--white-color);
+    padding: 0.4rem 1.2rem;
+}
+
+.social-handles > a {
+    text-decoration: none;
+}
+
+#address {
+    /* background-color: blanchedalmond; */
+    grid-area: address;
+    flex-direction: column;
+}
+
+#address > span {
+    color: var(--white-color);
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+}
+
+#topic-address {
+    text-decoration: underline;
 }
 
 /* Media queries for footer section */
