@@ -94,7 +94,7 @@ nav>li {
         'profile-pic description';
     height: 95vh;
     grid-template-columns: 1fr 1fr;
-    border-bottom: 10px solid var(--mid-night-blue);
+    border-bottom: 5px solid var(--mid-night-blue);
     margin-bottom: 2rem;
     /* background-color: brown; */
 }
@@ -360,17 +360,18 @@ nav>li {
 #netflix-clone {
     /* background-color: cornflowerblue; */
     grid-area: netflix;
+    padding: 1rem;
 }
 
 #temp-cnvtr {
     /* background-color: aqua; */
     grid-area: temp;
+    padding: 1rem;
 }
 
 #netflix-clone > div,
 #temp-cnvtr > div {
     justify-content: space-around;
-    /* background-color:aliceblue; */
     width: 70%;
     height: 10vh;
 }
@@ -399,7 +400,8 @@ button:hover {
 }
 
 .project-img {
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    border: 5px solid var(--teal-blue);
     height: 60%;
     width: 70%;
     border-radius: 23px;
@@ -525,6 +527,9 @@ footer {
 
 #contacts {
     /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+    padding-top: 4.5rem;
     grid-area: contact;
     color: var(--white-color);
     padding-left: 3rem;
@@ -540,12 +545,18 @@ footer {
     font-family: var(--font-family);
     color: var(--black-color);
     font-weight: 400;
-    width: 170px;
+    width: 160px;
     font-size: 1.1rem;
     padding: 0.8rem 0rem;
-    margin: 1.8rem 0rem;
+    margin: 0.5rem 0rem;
     border-radius: 50px;
     border: none;
+}
+
+#contacts > a {
+    /* background-color: #008080; */
+    width: 0;
+    height: 0;
 }
 
 #social {
@@ -564,11 +575,16 @@ footer {
 
 .social-handles > a > span {
     color: var(--white-color);
-    padding: 0.4rem 1.2rem;
+    padding: 0.4rem 1rem;
 }
 
 .social-handles > a {
     text-decoration: none;
+    /* background-color: #008080; */
+}
+
+.social-handles > a:hover > span {
+    text-decoration: underline;
 }
 
 #address {
