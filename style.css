@@ -83,18 +83,23 @@ li {
 }
 
 #nav-resume-li {
-    font-size: 1.3rem;
-    padding: 0.8rem 1rem;
     margin-right: 1rem;
+    border-radius: 50px;
+}
+#nav-resume-li > a {
+    padding: 0.8rem 1rem;
+    font-size: 1.3rem;
     font-family: var(--font-family);
     color: var(--seafoam-green);
-    border-radius: 50px;
-    transition: background-color 0.3s;
+    text-decoration: none;
+    border-radius: inherit;
+    border: 1px solid green;
+    transition: background-color 0.4s ease-out, border 0.4s ease-out;
 }
 
-#nav-resume-li:hover {
-    cursor: default;
+#nav-resume-li > a:hover {
     background-color: #9fe2bf13;
+    border: 1px solid #9fe2bf13;
 }
 @media screen and (max-width: 470px) {
     nav {
