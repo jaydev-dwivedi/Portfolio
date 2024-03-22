@@ -65,12 +65,16 @@ hr {
 /* navbar */
 nav {
     align-items: center;
+    justify-content: space-between;
     height: 12vh;
     background-color: var(--black-color);
 }
 
-nav>li {
+li {
     list-style: none;
+}
+
+#nav-title-li {
     font-size: 2rem;
     padding-left: 1.5rem;
     font-family: var(--font-family);
@@ -78,6 +82,20 @@ nav>li {
     /* font-weight: 300; */
 }
 
+#nav-resume-li {
+    font-size: 1.3rem;
+    padding: 0.8rem 1rem;
+    margin-right: 1rem;
+    font-family: var(--font-family);
+    color: var(--seafoam-green);
+    border-radius: 50px;
+    transition: background-color 0.3s;
+}
+
+#nav-resume-li:hover {
+    cursor: default;
+    background-color: #9fe2bf13;
+}
 @media screen and (max-width: 470px) {
     nav {
         height: 8vh;
@@ -369,15 +387,15 @@ nav>li {
     padding: 1rem;
 }
 
-#netflix-clone > div,
-#temp-cnvtr > div {
+#netflix-clone>div,
+#temp-cnvtr>div {
     justify-content: space-around;
     width: 70%;
     height: 10vh;
 }
 
-#netflix-clone > div > a > button,
-#temp-cnvtr > div > a > button{
+#netflix-clone>div>a>button,
+#temp-cnvtr>div>a>button {
     font-size: 1.2rem;
     background-color: var(--sapphire-blue);
     padding: 1rem;
@@ -392,8 +410,8 @@ button:hover {
     cursor: pointer;
 }
 
-#netflix-clone > div > a,
-#temp-cnvtr > div > a {
+#netflix-clone>div>a,
+#temp-cnvtr>div>a {
     color: var(--black-color);
     text-decoration: none;
     outline: none;
@@ -464,7 +482,7 @@ button:hover {
     color: var(--mid-night-blue);
 }
 
-#topic-experience > h1 {
+#topic-experience>h1 {
     width: 90%;
     border-bottom: 3px solid var(--mid-night-blue);
 }
@@ -520,7 +538,7 @@ footer {
 
 #topic-contact {
     grid-area: contact-me;
-    color:var(--white-color);
+    color: var(--white-color);
     font-family: var(--font-family);
     padding: 2rem 3rem;
 }
@@ -535,13 +553,13 @@ footer {
     padding-left: 3rem;
 }
 
-#contacts > span {
+#contacts>span {
     font-family: var(--font-family);
     font-size: 1.3rem;
     line-height: 2rem;
 }
 
-#contacts > a > button {
+#contacts>a>button {
     font-family: var(--font-family);
     color: var(--black-color);
     font-weight: 400;
@@ -553,7 +571,7 @@ footer {
     border: none;
 }
 
-#contacts > a {
+#contacts>a {
     /* background-color: #008080; */
     width: 0;
     height: 0;
@@ -573,17 +591,17 @@ footer {
     margin: 0.5rem 1rem;
 }
 
-.social-handles > a > span {
+.social-handles>a>span {
     color: var(--white-color);
     padding: 0.4rem 1rem;
 }
 
-.social-handles > a {
+.social-handles>a {
     text-decoration: none;
     /* background-color: #008080; */
 }
 
-.social-handles > a:hover > span {
+.social-handles>a:hover>span {
     text-decoration: underline;
 }
 
@@ -593,7 +611,7 @@ footer {
     flex-direction: column;
 }
 
-#address > span {
+#address>span {
     color: var(--white-color);
     font-family: var(--font-family);
     font-size: 1.2rem;
